@@ -142,14 +142,14 @@ const ContactLink = ({ icon: Icon, label, value, href }: { icon: LucideIcon, lab
     rel="noopener noreferrer"
     className="flex items-center gap-6 group"
   >
-    <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/40 group-hover:text-accent-cyan transition-colors">
+    <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-white/80 group-hover:text-accent-cyan transition-colors">
       <Icon className="w-6 h-6" />
     </div>
     <div>
-      <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 mb-1">{label}</p>
+      <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/30 mb-1">{label}</p>
       <div className="flex items-center gap-2">
         <p className="text-white font-medium group-hover:text-accent-cyan transition-colors">{value}</p>
-        <ExternalLink className="w-4 h-4 text-white/10 group-hover:text-accent-cyan/40 transition-colors" />
+        <ExternalLink className="w-4 h-4 text-white/20 group-hover:text-accent-cyan/40 transition-colors" />
       </div>
     </div>
   </a>

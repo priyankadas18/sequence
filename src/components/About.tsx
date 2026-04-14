@@ -145,7 +145,7 @@ export default function About() {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   {['PHP', 'Laravel', 'Node.js', 'MongoDB', 'SQL', 'Git', 'REST'].map(tag => (
-                    <span key={tag} className="text-[10px] px-3 py-1 glass text-white/40 tracking-widest uppercase">
+                    <span key={tag} className="text-[10px] px-3 py-1 glass text-white/80 tracking-widest uppercase">
                       {tag}
                     </span>
                   ))}
