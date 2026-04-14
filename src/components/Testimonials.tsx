@@ -120,8 +120,8 @@ export default function Testimonials() {
               onMouseLeave={() => setIsAutoPlaying(true)}
             >
               <div className="glass p-10 md:p-16 flex flex-col relative group max-w-4xl mx-auto">
-                <div className="absolute top-8 right-12 text-accent-cyan/10 group-hover:text-accent-cyan/20 transition-colors">
-                  <Quote className="w-24 h-24" />
+                <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-12 text-accent-cyan/10 group-hover:text-accent-cyan/20 transition-colors">
+                  <Quote className="w-12 h-12 md:w-24 md:h-24" />
                 </div>
                 
                 <div className="flex gap-1 mb-8">

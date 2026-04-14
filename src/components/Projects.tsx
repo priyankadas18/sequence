@@ -92,7 +92,7 @@ export default function Projects() {
           <div className="w-px h-24 bg-white/10 hidden md:block" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
@@ -113,51 +113,52 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
       viewport={{ once: true }}
       className="glass glass-hover group flex flex-col h-full overflow-hidden relative"
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-32 md:h-48 overflow-hidden">
         <img 
           src={project.image} 
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] to-transparent" />
-        <div className="absolute top-4 left-4">
-             <div className="w-10 h-10 glass rounded-full flex items-center justify-center text-accent-cyan">
-                <Icon className="w-5 h-5" />
+        <div className="absolute top-2 md:top-4 left-2 md:left-4">
+             <div className="w-8 h-8 md:w-10 md:h-10 glass rounded-full flex items-center justify-center text-accent-cyan">
+                <Icon className="w-4 h-4 md:w-5 md:h-5" />
              </div>
         </div>
       </div>
 
-      <div className="p-8 flex flex-col flex-grow">
-        <h3 className="text-2xl font-bold mb-3 tracking-wide group-hover:text-accent-cyan transition-colors">{project.title}</h3>
-        <p className="text-white/40 mb-8 flex-grow leading-relaxed text-sm font-light">
+      <div className="p-4 md:p-8 flex flex-col flex-grow">
+        <h3 className="text-base md:text-2xl font-bold mb-1 md:mb-3 tracking-wide group-hover:text-accent-cyan transition-colors line-clamp-1">{project.title}</h3>
+        <p className="text-white/40 mb-4 md:mb-8 flex-grow leading-relaxed text-[10px] md:text-sm font-light line-clamp-2 md:line-clamp-none">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-8">
-          {project.tags.map((tag: string) => (
+        <div className="flex flex-wrap gap-1 md:gap-2 mb-4 md:mb-8">
+          {project.tags.slice(0, 2).map((tag: string) => (
             <span 
               key={tag} 
-              className="px-3 py-1 glass text-white/30 text-[10px] font-bold tracking-widest uppercase rounded-full"
+              className="px-2 py-0.5 md:px-3 md:py-1 glass text-white/30 text-[8px] md:text-[10px] font-bold tracking-widest uppercase rounded-full"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="flex items-center justify-between pt-6 border-t border-white/5">
-          <div className="flex gap-4">
+        <div className="flex items-center justify-between pt-4 md:pt-6 border-t border-white/5">
+          <div className="flex gap-2 md:gap-4">
              <a href={project.link} target="_blank" rel="noopener noreferrer">
-               <ExternalLink className="w-5 h-5 text-white/20 hover:text-accent-cyan transition-colors cursor-pointer" />
+               <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-white/20 hover:text-accent-cyan transition-colors cursor-pointer" />
              </a>
           </div>
           <a 
             href={project.link} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-[10px] font-bold tracking-[0.2em] uppercase text-accent-cyan flex items-center gap-2 group/btn"
+            className="text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-accent-cyan flex items-center gap-1 md:gap-2 group/btn"
           >
-            View Project
-            <ArrowUpRight className="w-3 h-3 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+            <span className="hidden sm:inline">View Project</span>
+            <span className="sm:hidden">View</span>
+            <ArrowUpRight className="w-2 h-2 md:w-3 md:h-3 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
           </a>
         </div>
       </div>

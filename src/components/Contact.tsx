@@ -34,12 +34,12 @@ export default function Contact() {
   return (
     <section id="contact" className="relative z-20 py-32 px-12 md:px-24 bg-[#0A0A0F]">
       <div className="max-w-7xl mx-auto">
-        <div className="glass p-12 md:p-24 relative overflow-hidden">
+        <div className="glass p-6 md:p-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 blur-[120px] rounded-full -mr-48 -mt-48" />
           
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div>
-              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
+              <h2 className="text-3xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
                 LET&apos;S BUILD <br />
                 <span className="text-premium">SOMETHING</span> <br />
                 IMPACTFUL.

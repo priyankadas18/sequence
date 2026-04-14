@@ -32,6 +32,7 @@ const ExpertiseCard = ({ icon: Icon, title, description }: { icon: LucideIcon, t
 export default function About() {
   const techStack = [
     { name: 'PHP', level: 90 },
+    { name: 'Laravel', level: 90 },
     { name: 'Node.js', level: 85 },
     { name: 'SQL', level: 90 },
     { name: 'MongoDB', level: 80 },
@@ -142,8 +143,8 @@ export default function About() {
                 <p className="text-white/60 leading-relaxed italic">
                   &quot;I believe great software is not just functional — it&apos;s scalable, maintainable, and built with precision and purpose.&quot;
                 </p>
-                <div className="mt-6 flex gap-4">
-                  {['PHP', 'Node.js', 'MongoDB', 'SQL', 'Git', 'REST'].map(tag => (
+                <div className="mt-6 flex flex-wrap gap-4">
+                  {['PHP', 'Laravel', 'Node.js', 'MongoDB', 'SQL', 'Git', 'REST'].map(tag => (
                     <span key={tag} className="text-[10px] px-3 py-1 glass text-white/40 tracking-widest uppercase">
                       {tag}
                     </span>
